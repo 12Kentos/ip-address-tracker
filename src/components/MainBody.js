@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./MainBody.module.scss";
 
-const MainBody = () => {
+const MainBody = (props) => {
   const API_KEY = "at_Xcv7csPj35fJOHLAcZ38BLZ4jDYxP";
 
   const [userInput, setUserInput] = useState("");
@@ -12,10 +12,6 @@ const MainBody = () => {
   const [location, setLocation] = useState("Brooklyn, NY 10001");
   const [timezone, setTimezone] = useState("UTC -05:00");
   const [isp, setIsp] = useState("SpaceX Starlink");
-
-  // useEffect(() => {
-  //   fetchIP();
-  // }, []);
 
   const fetchIP = async () => {
     try {
@@ -31,6 +27,10 @@ const MainBody = () => {
       );
       setTimezone(data.location.timezone);
       setIsp(data.isp);
+
+      console.log(data);
+
+      props.setLngLatHandler(+data.location.lat, +data.location.lng);
     } catch {}
   };
 

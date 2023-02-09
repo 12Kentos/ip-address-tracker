@@ -101,10 +101,11 @@
     width: clamp(30rem, 90vw, 111rem);
     padding: 2.4rem 0;
     position: absolute;
-    top: 55%;
+    top: 60%;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
     padding: 3.2rem 3.2rem;
     height: 100%;
+    z-index: 500;
   }
 }
 
@@ -136,6 +137,7 @@
       grid-template-columns: 1fr 1fr;
       row-gap: 3rem;
       max-height: 18.1rem;
+      top: 70%;
     }
   }
 }
@@ -151,7 +153,6 @@
 
     &-wrapper {
       grid-template-columns: repeat(4, 1fr);
-      top: 60%;
     }
   }
 
