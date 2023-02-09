@@ -157,6 +157,7 @@
   }
 
   .individual-info-wrapper {
+    grid-template-rows: 3.6rem 1fr;
     gap: 0;
     &:not(:last-child) {
       border-right: 1px solid rgba(0, 0, 0, 0.15);
